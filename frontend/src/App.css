@@ -1,0 +1,535 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+}
+ul{
+    list-style-type: none;
+}
+.horizontal{
+    display: flex;
+}
+.navBar{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(0, 0, 0);
+    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.381);
+}
+.logo{
+    /* width: 80px; */
+    height: 70px;
+    /* border-radius: 100%; */
+}
+.searchIcon{
+    margin-top: 10px;
+    margin-left: 5px;
+    color: rgb(243, 104, 73);
+}
+.centerSpinner{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.centerSpinner img{
+    height: 200px;
+}
+.landingContainer{
+    height: 450px;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    display: flex;
+}
+.landingContainer .navSection{
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    margin-left: 10px;
+    width: 20vw;
+    height: 400px;
+    border-radius: 5px;
+
+}
+.brandImageContainer{
+    background-image: url('./images/brandGif.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    width: 70vw;
+    margin-left: 20px;
+}
+.specialDealGif{
+    background-image: url('./images/specialdeal.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    width: 100vw;
+}
+select{
+    display: block;
+    margin-left: 200px;
+    width: 500px;
+    height: 50px;
+}
+.container{
+    padding: 50px 10px;
+    background-color: whitesmoke;
+    height: fit-content;
+    width: 90vw;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 7px;
+    
+}
+
+.containerFluid{
+    padding: 50px 10px;
+    background-color: whitesmoke;
+    height: fit-content;
+    width: 100vw;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 7px;
+    
+}
+
+
+.navLink{
+    color: rgb(243, 104, 73);
+}
+.navLink:hover{
+    color: red;
+    cursor: pointer;
+}
+.deleteIcon{
+    color: rgb(114, 1, 1);
+}
+.deleteIcon:hover{
+    color: rgb(223, 13, 13);
+}
+
+.navMobileMenu{
+    z-index: 3 ;
+    background-color: rgb(94, 22, 6);
+    color: white;
+    width: 70%;
+    height: 80vh;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    animation: fadeIn 0.7s;
+}
+.mobileNavLink{
+    margin-top: 10px;
+    font-size: larger;
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0.7;
+        transform: translateX(50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.navMobileMenu.show {  
+    height: 80vh; /* Adjust based on content */  
+}  
+
+.navMobileMenu.hidden {  
+    display: none; /* To hide when it's not visible */  
+} 
+.navMobileMenu li:hover{
+    border-bottom: 2px solid red ;
+}
+
+.searchList{
+    width: 100%;
+    background-color: rgb(5, 5, 5);
+    color: rgb(245, 234, 234);
+    height: fit-content;
+    position: absolute;
+    z-index: 2;
+}
+.brandList{
+    background-color: rgb(249, 244, 244);
+    font-size: larger;
+    width: 100px;
+    margin: 20px;
+    height: 5;
+    border-radius: 3px;
+    text-align: center;
+}
+.brandList:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+.brandContainer{
+    background-color: rgb(243, 104, 73);
+    margin-top: 0px;
+}
+.eventHeader{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    color: rgb(1, 1, 51);
+}
+.eventCard{
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 300px;
+    border: 0px solid;
+    margin-top: 50px;
+  }
+.card{
+    margin-left: 5px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height: 320px;
+    flex-grow: 0.1;
+    border: 3px solid rgba(13, 14, 20, 0.088);
+}
+.card header img{
+    width: 100%;
+    height: 200px;
+}
+.card main{
+    height: 50px;
+}
+.cardFooter{
+    background-color: rgb(1, 4, 35);
+    color: white;
+    width: 100vw;
+    height: 200px;
+    text-align: center;
+}
+.longCard{
+    height: 370px;
+}
+.center{
+    text-align: center;
+}
+.flexContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* justify-content: center; */
+}
+.header{
+    text-align: center;
+}
+.page{
+    background-color: rgba(175, 200, 207, 0.548);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.specialCard{
+    display: block;
+    border-radius: 7px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    width: 270px;
+    height: 400px;
+    border: 2px solid rgb(0, 255, 34);
+}
+.specialCard header img{
+    width: 100%;
+    height: 250px;
+}
+.specialCard main{
+    height: 50px;
+}
+.btnIcon{
+    display: block;
+    margin: auto;
+}
+.selectBtn{
+    background-color: rgb(243, 104, 73);
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    height: 50px;
+    width: fit-content;
+    padding: 10px;
+    border: 0px solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+.selectBtn:hover{
+    background-color: rgb(243, 154, 134);
+
+}
+.sectionContainer{
+    display: block;
+    width: 90%;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+h3{
+    margin: 0px;
+    padding: 0px;
+}
+.footer{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.footerContent{
+    margin-top: 50px;
+}
+.brandHeader{
+    padding-top: 50px;
+    margin-bottom: 30px;
+}
+.socialLink{
+    margin-top: 50px;
+    color: rgb(128, 128, 128);
+}
+.socialIcon{
+    color: rgb(10, 205, 10);
+    margin-bottom: 50px;
+}
+.socialIcon:hover{
+    color: rgb(1, 101, 1);
+}
+li{
+    margin-left: 20px;
+}
+.pageContainer{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    background-color: rgba(128, 128, 128, 0.47);
+}
+
+input{
+    display: block;
+    margin: auto;
+    padding-left: 10px;
+    width: 80%;
+    height: 40px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.navBarIcon{
+    color: rgb(243, 104, 73);
+    padding: 5px;
+    border-radius: 100%;
+}
+.navBarIcon:hover{
+    color: rgb(162, 45, 19);
+}
+.cartIcon{
+    float: right;
+    color: rgb(243, 104, 73);
+}
+.cartIcon:hover{
+    color: rgb(162, 45, 19);
+}
+.card img{
+    transition-duration: 1.0s;
+    transition-delay: 0ms;
+}
+.card img:hover{
+    opacity: 0.8;
+    transform: scale(0.9);
+}
+.btn{
+    width: 150px;
+    height: 50px;
+    background-color: rgb(243, 104, 73);
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.btn:hover{
+    background-color: rgb(135, 55, 37);
+
+}
+.searchItem{
+    width: 250px;
+    color: black;
+}
+.smallBtn{
+    width: 100px;
+    height: 30px;
+    background-color: green;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    font-size: larger;
+}
+.menuIcon{
+    display: none;
+}
+.pageContainer{
+    padding-top: 40px;
+    text-align: center;
+    width: 90%;
+    display: block;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 50px;
+    background-color: rgb(184, 181, 181);
+}
+.pageBtn{
+    display: block;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(243, 104, 73);
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    margin: auto;
+    border: 0px solid;
+    border-radius: 5px;
+}
+.pageBtn:hover{
+    background-color: rgb(162, 45, 19);
+    color: rgb(255, 255, 255);
+}
+.pageTxt{
+    font-size: 25px;
+    font-weight: 700;
+}
+.mobileCategory{
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    padding-top: 10px;
+    display: none;
+}
+.list:hover{
+    cursor: pointer;
+    background-color: rgb(44, 43, 43);
+}
+.navBtn{
+    width: 120px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 0px solid;
+    background-color: rgb(243, 104, 73);
+    color: white;
+    font-size: larger;
+}
+.roundBadge{
+    position: absolute;
+    top: 18px ;
+    right: 100px ;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    border: 0px solid;
+    background-color: rgb(79, 1, 1);
+    color: white;
+}
+.homeIcon{
+    background-color: rgb(162, 45, 19);
+    color: white;
+    position: fixed;
+    bottom: 20px ;
+    left: 5px ;
+    border-radius: 100%;
+    padding: 5px;
+}
+.updateCard{
+    width: 100%;
+    /* height: 200px; */
+    background-color: grey;
+    color: black;
+    margin: 50px;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    padding: 100px 0px;
+}
+.textCenter{
+    text-align: center;
+}
+.margin1{
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 500px) {
+    
+    .container{
+        padding: 20px 10px;
+        width: 100vw;
+        border-radius: 0px;
+    }
+    .landingContainer{
+        margin: 0px;
+        padding: 0px;
+        height: 350px;
+    }
+    .searchItem{
+        width: 200px;
+    }
+    .logo{
+        width: 80px;
+    }
+    .navIcon{
+        display: none;
+    }
+    .menuIcon{
+        display: block;
+    }
+    .landingContainer{
+        display: block;
+        height: 650px;
+    }
+    .landingContainer .navSection{
+        display: none;
+    }
+
+    .brandImageContainer{
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        height: 350px;
+    }
+    .mobileCategory{
+        display: block;
+        height: 300px;
+    }
+    .card{
+        width: 150px;
+        height: 300px;
+        margin-top: 20px;
+    }
+    .longCard{
+        height: 400px;
+    }
+}
