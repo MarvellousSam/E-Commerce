@@ -27,7 +27,7 @@ function ProductInfo() {
 
     const fetchData=async()=>{
         try {
-            const response = await axios.get(`http://localhost:4000/api/product/${id}`)
+            const response = await axios.get(`https://haven-of-wisdom-server.onrender.com/api/product/${id}`)
             const data = response.data.product
             setProducts(data)
             console.log(products)
@@ -48,7 +48,7 @@ function ProductInfo() {
           try {
             console.log(`cart item id is ${id}`)
             const token = localStorage.getItem('token')
-            await axios.post('http://localhost:4000/api/cart', {item: id, user: email }, {
+            await axios.post('https://haven-of-wisdom-server.onrender.com/api/cart', {item: id, user: email }, {
               headers: {
                 Authorization: `Bearer ${token}`
               }

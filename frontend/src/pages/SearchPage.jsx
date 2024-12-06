@@ -21,7 +21,7 @@ function Searchpage() {
 
     const fetchProducts=async()=>{
       try {
-        const result = await axios.get(`http://localhost:4000/api/products/name/${item}?page=${page}`)
+        const result = await axios.get(`https://haven-of-wisdom-server.onrender.com/api/products/name/${item}?page=${page}`)
         const products = result.data.product
         setProducts(products)
         setLoading(false)
@@ -41,7 +41,7 @@ function Searchpage() {
         try {
           console.log(`cart item id is ${id}`)
           const token = localStorage.getItem('token')
-          await axios.post('http://localhost:4000/api/cart', {item: id, user: email }, {
+          await axios.post('https://haven-of-wisdom-server.onrender.com/api/cart', {item: id, user: email }, {
             headers: {
               Authorization: `Bearer ${token}`
             }

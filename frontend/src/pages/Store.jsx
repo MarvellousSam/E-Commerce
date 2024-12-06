@@ -21,7 +21,7 @@ function Store() {
     const fetchStoreProducts=async()=>{
       try {
         const email = sessionStorage.getItem('email')
-        const result = await axios.get(`http://localhost:4000/api/store/${email}?page=${page}`)
+        const result = await axios.get(`https://haven-of-wisdom-server.onrender.com/api/store/${email}?page=${page}`)
         const products = result.data.product
         setProducts(products)
         setLoading(false)
@@ -38,7 +38,7 @@ function Store() {
          try {
           const token = localStorage.getItem('token')
           const email = sessionStorage.getItem('email')
-          await axios.delete(`http://localhost:4000/api/store/${email}/${id}`,
+          await axios.delete(`https://haven-of-wisdom-server.onrender.com/api/store/${email}/${id}`,
             {
               headers: {
                 Authorization: `Bearer ${token}`

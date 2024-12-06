@@ -64,7 +64,7 @@ function PostProduct() {
                 console.log(form)
 
                 setTimeout(async()=>{
-                    await axios.post(`http://localhost:4000/api/products?email=${email}&password=${password}`,
+                    await axios.post(`https://haven-of-wisdom-server.onrender.com/api/products?email=${email}&password=${password}`,
                         {
                             name: name,
                             brand: brand,

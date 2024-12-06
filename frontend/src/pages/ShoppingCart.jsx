@@ -16,7 +16,7 @@ function ShoppingCart() {
     const fetchCart=async(id)=>{
       try {
         const token = localStorage.getItem('token')
-        const response = await axios.get(`http://localhost:4000/api/cart?user=${user}`,
+        const response = await axios.get(`https://haven-of-wisdom-server.onrender.com/api/cart?user=${user}`,
           {
             headers: {
               Authorization: `Bearer ${token}`
@@ -38,7 +38,7 @@ function ShoppingCart() {
 
          try {
           const token = localStorage.getItem('token')
-          await axios.delete(`http://localhost:4000/api/cart/${user}/${id}`,
+          await axios.delete(`https://haven-of-wisdom-server.onrender.com/api/cart/${user}/${id}`,
             {
               headers: {
                 Authorization: `Bearer ${token}`
@@ -67,7 +67,7 @@ function ShoppingCart() {
 
     // const sendOrder=async()=>{
     //   try {
-    //     await axios.post('http://localhost:4000/api/order', {user: user})
+    //     await axios.post('https://haven-of-wisdom-server.onrender.com/api/order', {user: user})
     //   } catch (error) {
     //     console.log(error)
     //   }

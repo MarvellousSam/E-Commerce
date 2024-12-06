@@ -21,7 +21,7 @@ function Homepage() {
   const fetchProducts=async()=>{
     setLoading(true)
     try {
-      const response = await axios.get(`http://localhost:4000/api/products?page=${page}`)
+      const response = await axios.get(`https://haven-of-wisdom-server.onrender.com/api/products?page=${page}`)
       const products = response.data.product
       setProduct(products)
       setLoading(false)
@@ -33,7 +33,7 @@ function Homepage() {
 
   const fetchSpecialProducts=async()=>{
     try {
-      const response = await axios.get('http://localhost:4000/api/products?specialOffer=true')
+      const response = await axios.get('https://haven-of-wisdom-server.onrender.com/api/products?specialOffer=true')
       const specialProducts = response.data.product
       setSpecialOffer(specialProducts)
       setLoading(false)
@@ -52,7 +52,7 @@ function Homepage() {
       try {
         console.log(`cart item id is ${id}`)
         const token = localStorage.getItem('token')
-        const response = await axios.post('http://localhost:4000/api/cart', {item: id, user: email }, {
+        const response = await axios.post('https://haven-of-wisdom-server.onrender.com/api/cart', {item: id, user: email }, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -145,7 +145,7 @@ const eventImage = (
 
   const fetchEvent =async()=>{
     try {
-      const response = await axios.get('http://localhost:4000/api/event')
+      const response = await axios.get('https://haven-of-wisdom-server.onrender.com/api/event')
       const resp = response.data.event
       setEvent(resp)
       console.log(resp)

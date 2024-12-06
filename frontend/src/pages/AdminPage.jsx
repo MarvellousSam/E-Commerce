@@ -19,7 +19,7 @@ function AdminPage() {
           const uploadedImageUrl = response.data.secure_url;
           console.log('Upload successful:', uploadedImageUrl);
     
-          await axios.post(`http://localhost:4000/api/event`, {imageUrl: uploadedImageUrl})
+          await axios.post(`https://haven-of-wisdom-server.onrender.com/api/event`, {imageUrl: uploadedImageUrl})
           console.log('New Event Created')
         } catch (error) {
           console.log(error)
@@ -40,7 +40,7 @@ function AdminPage() {
 
     const fetchEvent =async()=>{
         try {
-            const response = await axios.get('http://localhost:4000/api/event')
+            const response = await axios.get('https://haven-of-wisdom-server.onrender.com/api/event')
             const resp = response.data.event
             setEvent(resp)
             console.log(resp)

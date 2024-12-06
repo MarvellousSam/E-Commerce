@@ -42,7 +42,7 @@ function Navbar() {
 
   const fetchInput=async(e)=>{
     try {
-      const response = await axios.get(`http://localhost:4000/api/products/search/items`)
+      const response = await axios.get(`https://haven-of-wisdom-server.onrender.com/api/products/search/items`)
       const result = response.data.products
       setProducts(result);  
       setFilteredProducts(result)

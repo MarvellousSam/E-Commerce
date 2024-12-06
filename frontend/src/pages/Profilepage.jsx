@@ -21,7 +21,7 @@ function Profilepage() {
     const fetchUserDetails=async()=>{
         try {
             const user = sessionStorage.getItem('email')
-            const response = await axios.get(`http://localhost:4000/api/user/${user}`)
+            const response = await axios.get(`https://haven-of-wisdom-server.onrender.com/api/user/${user}`)
             setLoading(false)
             if(response){
                 setProfile(response.data.user)

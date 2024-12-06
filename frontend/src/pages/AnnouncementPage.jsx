@@ -42,7 +42,7 @@ function AnnouncementPage() {
         }))
 
             // Uploading the text content of the announcement to the database
-            await axios.post('http://localhost:4000/api/announcement', update)
+            await axios.post('https://haven-of-wisdom-server.onrender.com/api/announcement', update)
             window.alert('Announcement updated successfully')
         } catch (error) {   
             console.log(error)

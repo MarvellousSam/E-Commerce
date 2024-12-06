@@ -10,7 +10,7 @@ function BrandContainer() {
     const params = useParams()
     const category = params.category
     const fetchBrandName=async()=>{
-        const result = await axios.get(`http://localhost:4000/api/products/brand/${category}`)
+        const result = await axios.get(`https://haven-of-wisdom-server.onrender.com/api/products/brand/${category}`)
         const brandList = result.data.brandItems
         setBrand(brandList)
         console.log(brand)
@@ -30,7 +30,7 @@ function BrandContainer() {
         try {
         console.log(`cart item id is ${id}`)
         const token = localStorage.getItem('token')
-        const response = await axios.post('http://localhost:4000/api/cart', {item: id, user: email }, {
+        const response = await axios.post('https://haven-of-wisdom-server.onrender.com/api/cart', {item: id, user: email }, {
             headers: {
             Authorization: `Bearer ${token}`
             }
@@ -46,7 +46,7 @@ function BrandContainer() {
 
     const fetchProduct=async(brand)=>{
         try {
-            const result = await axios.get(`http://localhost:4000/api/products/category/${category}/${brand}`)
+            const result = await axios.get(`https://haven-of-wisdom-server.onrender.com/api/products/category/${category}/${brand}`)
             const products = result.data.products
             setProducts(products)
         } catch (error) {

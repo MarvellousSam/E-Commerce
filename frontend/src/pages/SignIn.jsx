@@ -23,7 +23,7 @@ function SignIn() {
 
     const submitData=async(e)=>{
         e.preventDefault()
-        const response = await axios.post('http://localhost:4000/api/login',{ email: email, password: password})
+        const response = await axios.post('https://haven-of-wisdom-server.onrender.com/api/login',{ email: email, password: password})
         const status = response.data.message
         const emailResp = response.data.email
         const token = response.data.token

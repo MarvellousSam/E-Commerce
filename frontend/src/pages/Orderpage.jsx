@@ -12,7 +12,7 @@ function Orderpage() {
 
     const fetchOrder=async(id)=>{
       try {
-        const response = await axios.get(`http://localhost:4000/api/order?user=${user}`)
+        const response = await axios.get(`https://haven-of-wisdom-server.onrender.com/api/order?user=${user}`)
         const orderItems = response.data.cart
         setOrder(orderItems)
         console.log(`order items: ${order}`)
