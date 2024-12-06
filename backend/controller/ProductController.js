@@ -14,7 +14,11 @@ const getProduct=async(req,res)=>{
 
         if(specialOffer=='true'){
             const product = await Products.find({specialOffer: 'true'}).select('name price location imageUrl').limit(pageSize).skip().limit(5)
-            res.json({product: product})
+            if(product){
+                res.json({product: product})
+            }else{
+                res.json({message: 'product not found'})
+            }
         }
         else{
             const totalNoOfProducts = await Products.countDocuments()
