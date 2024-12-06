@@ -15,7 +15,7 @@ const getProduct=async(req,res)=>{
         if(specialOffer=='true'){
             const product = await Products.find({specialOffer: 'true'}).select('name price location imageUrl').limit(pageSize).skip().limit(5)
             if(product){
-                res.json({product: product})
+                res.json({product: product, message: 'product fetched from db'})
             }else{
                 res.json({message: 'product not found'})
             }
